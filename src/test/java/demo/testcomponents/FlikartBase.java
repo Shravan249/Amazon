@@ -14,6 +14,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 
 import demo.pageobject.Flipkartsearch;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FlikartBase {
 
@@ -32,8 +33,7 @@ public class FlikartBase {
 
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
-			System.setProperty("webdriver.chrome.driver",
-					"D:\\Soft\\ChromeDriver\\chromedriver_win32/chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(options);
 		}
 
@@ -41,9 +41,10 @@ public class FlikartBase {
 		}
 
 		else if (browser.equals("edge")) {
-			System.setProperty("webdriver.edge.driver", "D:\\Java files\\edgedriver_win64/msedgedriver.exe");
+			
 			EdgeOptions options = new EdgeOptions();
 			options.addArguments("--remote-allow-origins=*");
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver(options);
 		}
 		driver.manage().window().maximize();

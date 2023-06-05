@@ -9,7 +9,7 @@
   
   <test name="test">
   <classes>
-       <class name="demo.ErrorValidation"></class>
+       <class name="demo.Amazon"></class>
   </classes>
   </test>
 </suite> <!-- Suite -->
