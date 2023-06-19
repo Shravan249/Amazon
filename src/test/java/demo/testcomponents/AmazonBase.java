@@ -17,6 +17,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 
 import demo.pageobject.Amazonsearch;
 import demo.pageobject.SearchVerification;
+import demo.pageobject.SortingChecks;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AmazonBase {
@@ -68,6 +69,14 @@ public class AmazonBase {
 		driver.get(url);
 		SearchVerification search = new SearchVerification(driver);
 		return search;
+	}
+	
+	public SortingChecks sorting() throws Exception {
+		
+		driver=driverIntialize();
+		driver.get(url);
+		SortingChecks sort=new SortingChecks(driver);
+		return sort;
 	}
 
 	public String getScreenshot(String testName, WebDriver driver) throws Exception {
