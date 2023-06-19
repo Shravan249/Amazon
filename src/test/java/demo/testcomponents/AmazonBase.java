@@ -14,7 +14,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.testng.annotations.AfterMethod;
 
 import demo.pageobject.Amazonsearch;
 import demo.pageobject.SearchVerification;
@@ -60,8 +59,7 @@ public class AmazonBase {
 		driver = driverIntialize();
 		driver.get(url);
 		Amazonsearch as = new Amazonsearch(driver);
-
-		return as;
+		return as ;
 	}
 
 	public SearchVerification searchVerify() throws Exception {
@@ -84,11 +82,6 @@ public class AmazonBase {
 	}
 
 	
-	  @AfterMethod public void getClose() {
-	  
-	  driver.close();
-	  
-	  }
 	 
 
 }

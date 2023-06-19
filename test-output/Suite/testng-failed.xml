@@ -4,34 +4,14 @@
   <listeners>
     <listener class-name="demo.resources.Listerners"/>
   </listeners>
-  <test thread-count="5" name="test1(failed)">
-    <classes>
-      <class name="demo.Amazon">
-        <methods>
-          <include name="search" invocation-numbers="0"/>
-          <include name="getClose"/>
-        </methods>
-      </class> <!-- demo.Amazon -->
-    </classes>
-  </test> <!-- test1(failed) -->
-  <test thread-count="5" name="test2(failed)">
-    <classes>
-      <class name="demo.ErrorValidation">
-        <methods>
-          <include name="search"/>
-          <include name="getClose"/>
-        </methods>
-      </class> <!-- demo.ErrorValidation -->
-    </classes>
-  </test> <!-- test2(failed) -->
-  <test thread-count="5" name="test3(failed)">
+  <test thread-count="5" name="test(failed)">
     <classes>
       <class name="demo.Amazon2">
         <methods>
-          <include name="search" invocation-numbers="0 1 2"/>
-          <include name="getClose"/>
+          <include name="check" invocation-numbers="0 1 2"/>
+          <include name="search"/>
         </methods>
       </class> <!-- demo.Amazon2 -->
     </classes>
-  </test> <!-- test3(failed) -->
+  </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -11,6 +11,7 @@ import demo.testcomponents.AmazonBase;
 
 public class Amazon2 extends AmazonBase{
 
+	
 	@Test(dataProvider = "getData")
 	public void search(String email,String password,String searchtext,String brandname) throws Exception{
 		
@@ -21,6 +22,7 @@ public class Amazon2 extends AmazonBase{
 		
 
 	}
+	
 	
 	@DataProvider
 	public String[][] getData() throws Exception {

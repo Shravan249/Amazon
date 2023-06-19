@@ -58,7 +58,8 @@ public class Amazonsearch {
 		next.click();
 		password.sendKeys(passwords);
 		signIn.click();
-
+		 
+      
 	}
 	
 	public void order(String searchText,String brandName) {

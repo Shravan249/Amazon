@@ -13,7 +13,7 @@ import demo.testcomponents.AmazonBase;
 
 public class Amazon extends AmazonBase{
 
-	@Test(dataProvider = "getValues")
+    @Test(dataProvider = "getValues")
 	public void search(HashMap<String,String> input) throws IOException {
 		
 	    Amazonsearch as = website();
@@ -24,6 +24,7 @@ public class Amazon extends AmazonBase{
 
 	}
 	
+
 	@DataProvider
 	public Object[][] getValues() throws IOException {
 		String pathFile="./src/test/java/demo/data/Amazondata.json";
